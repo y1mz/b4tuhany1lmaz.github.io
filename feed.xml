@@ -1,4 +1,162 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2023-01-20T20:38:51+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Batuhan’s Blog</title><subtitle>The Batuhan's Blog</subtitle><author><name>Batuhan Yılmaz</name><email>bthyilmaz@outlook.com</email></author><entry><title type="html">Using an iPhone 6 Plus as a secondary phone in 2023</title><link href="http://localhost:4000/using-an-iphone-6-plus-as-a-secondary-phone-in-2023/" rel="alternate" type="text/html" title="Using an iPhone 6 Plus as a secondary phone in 2023" /><published>2023-01-20T00:00:00+00:00</published><updated>2023-01-20T00:00:00+00:00</updated><id>http://localhost:4000/using-an-iphone-6-plus-as-a-secondary-phone-in-2023</id><content type="html" xml:base="http://localhost:4000/using-an-iphone-6-plus-as-a-secondary-phone-in-2023/"><![CDATA[<p>Hello everyone, I’m Batuhan and this blogpost has written from my new iPhone 6 Plus! I’ve got this phone from my cousin and it’s been used ver carefully and it runs pretty great. And for that I wanted see how it holds up trough a day and for that I carried it with me to the school and it made trough the day without any big problems. Only problem that I had with this phone is it has a defective battery in it and it doesn’t lasts long. Like since the beginning of the test, I had to plug it in for 3 times and charge it up up to 80 percent in order to keep that thing up. Otherwise it works perfectly fine for almost any tasks. Like writing this blogpost on the Evernote app, taking some photos using the camera or listening music trough the Apple Music. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2023-03-02T13:25:22+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Batuhan’s Blog</title><subtitle>The Batuhan's Blog</subtitle><author><name>Batuhan Yılmaz</name><email>bthyilmaz@outlook.com</email></author><entry><title type="html">I’m back on Blogging</title><link href="http://localhost:4000/im-back-on-blogging/" rel="alternate" type="text/html" title="I’m back on Blogging" /><published>2023-02-23T14:30:00+00:00</published><updated>2023-02-23T14:30:00+00:00</updated><id>http://localhost:4000/im-back-on-blogging</id><content type="html" xml:base="http://localhost:4000/im-back-on-blogging/"><![CDATA[<p>Hello everyone I’m Batuhan and today I can’t be more happier becouse I’ll be able to start on blogging again. So soo much thing happened in the past, huge earthquakes fallen buildings restarting my life from scratch and etc …
+What matters most is me and my family is still alive and today I decided to start blogging again. I had a backup of that website on a hidden Codeberg repo and thanks to that I’m able to restart hosting this website. 
+I’m just writing this tiny post to inform you guys that I’m perfectly fine and just busy with recreating my life and other stuff. I want to say thank you for anyone supports Turkey on this disaster and helps us. Without any further words. Until next time guys!</p>
+
+<h2 id="thank-you">Thank You!</h2>
+<p>Batuhan Yılmaz - 23.02.2023 - 6/100</p>]]></content><author><name>Batuhan Yaşar Yılmaz</name></author><summary type="html"><![CDATA[Hello everyone I’m Batuhan and today I can’t be more happier becouse I’ll be able to start on blogging again. So soo much thing happened in the past, huge earthquakes fallen buildings restarting my life from scratch and etc … What matters most is me and my family is still alive and today I decided to start blogging again. I had a backup of that website on a hidden Codeberg repo and thanks to that I’m able to restart hosting this website. I’m just writing this tiny post to inform you guys that I’m perfectly fine and just busy with recreating my life and other stuff. I want to say thank you for anyone supports Turkey on this disaster and helps us. Without any further words. Until next time guys!]]></summary></entry><entry><title type="html">Adding RSS feeds from other blogs to end of my posts</title><link href="http://localhost:4000/adding-rss-feeds-from-other-blogs-to-end-of-my-posts/" rel="alternate" type="text/html" title="Adding RSS feeds from other blogs to end of my posts" /><published>2023-01-26T21:00:11+00:00</published><updated>2023-01-26T21:00:11+00:00</updated><id>http://localhost:4000/adding-rss-feeds-from-other-blogs-to-end-of-my-posts</id><content type="html" xml:base="http://localhost:4000/adding-rss-feeds-from-other-blogs-to-end-of-my-posts/"><![CDATA[<p>Hey guys I’m Batuhan and at the second post of this day I’m gonna talk about how I added latest posts from the RSS feeds I follow to my blog.</p>
+
+<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202023-01-26%20at%2023.58.40.png" alt="" /></p>
+
+<p>Like that. 
+So to do that I used a script named openring to do that. openring is a simple script that creates webrings using the RSS feeds. It fetches the RSS feeds that you’ve provided and creates an html file that you can place  into includes folder. So let’s go a step by step on how you can do that.</p>
+
+<h3 id="1--install-go">1 ) Install go</h3>
+
+<p>So this script has written in go and before start using it you have to compile it using go. I’m currently on macOS and gonna show the macOS way. But if you’re on a different OS than me you can go to https://go.dev/dl/ page and download the right binary for your OS. 
+I’m going to use the macPorts to install the go into my system. To install it use the command <code class="language-plaintext highlighter-rouge">sudo port install go</code> and wait for it. After that you can get into step 2.</p>
+
+<h3 id="2--clone-openring-and-build-it">2 ) Clone openring and build it</h3>
+
+<p>Now open your terminal again and clone the openring using the command down below.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://git.sr.ht/~sircmpwn/openring &amp;&amp; cd openring
+</code></pre></div></div>
+<p>After that command is done, run the <code class="language-plaintext highlighter-rouge">go build</code> command and wait for it. After it’s done, you can continue to step 3.</p>
+
+<h3 id="3--use-the-openring">3 ) Use the openring</h3>
+
+<p>And here is the step that we’re going to use the openring. Using it is very simple.</p>
+
+<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202023-01-27%20at%2000.21.39.png" alt="" /></p>
+
+<p>Now in there you can see a file named in.html. This file is our template, you can edit this file for your site’s needs and have a much better look that fits into your site. Now we’re going to create a file named out.html that includes our posts using the openring. To create that file you can use the command I put down below.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openring \
+-s https://www.joelchrono12.xyz/feed.xml \ 
+-s https://andy-bell.co.uk/feed \ 
+-s https://kevquirk.com/feed.xml \
+&lt; in.html \
+&gt; out.html 
+</code></pre></div></div>
+<p>This command takes the in.html, adds 3 sources I placed and outputs it as the out.html. You can change these feeds as you like these are the ones that I’ve added to my site.</p>
+
+<p>So now it’s time to switch into jekyll part.</p>
+
+<p>Now in order to add our webring to our Jekyll blog. This part is really simple. 
+So now place the out.html file that you just created into _includes folder inside your jekyll blog and after that go to your _layouts folder and open the post.html file.  After that place the
+<code class="language-plaintext highlighter-rouge">% include out.html %</code> line under the main tag.</p>
+
+<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202023-01-27%20at%2000.42.42.png" alt="" /></p>
+
+<p>Like in that picture. And you’re done.</p>
+
+<p>I hope this post helps to everyone who wants to use openring on their own blog site. I wrote that blogpost while I’m so sleepy and I’m sorry for any mistakes I had.</p>
+
+<h2 id="thank-you">Thank You!</h2>
+
+<p>Batuhan Yılmaz - 27.01.2023 - 5/100</p>]]></content><author><name>Batuhan Yılmaz</name><email>bthyilmaz@outlook.com</email></author><summary type="html"><![CDATA[Hey guys I’m Batuhan and at the second post of this day I’m gonna talk about how I added latest posts from the RSS feeds I follow to my blog.]]></summary></entry><entry><title type="html">It’s time for personal blogs to make a comeback</title><link href="http://localhost:4000/its-time-for-personal-blogs-to-make-a-comeback/" rel="alternate" type="text/html" title="It’s time for personal blogs to make a comeback" /><published>2023-01-26T15:32:11+00:00</published><updated>2023-01-26T15:32:11+00:00</updated><id>http://localhost:4000/its-time-for-personal-blogs-to-make-a-comeback</id><content type="html" xml:base="http://localhost:4000/its-time-for-personal-blogs-to-make-a-comeback/"><![CDATA[<p>Hey guys I’m Batuhan and todays blogpost I’m going to talk about why personal blogging should make a comeback. Actually I had been considering to write a blogpost on that topic for some time. When I came across with The Verge’s <a href="https://www.theverge.com/23513418/bring-back-personal-blogging">this post</a> about bringing the blogging back and its importance for the internet. I decided to write my troughs on that.</p>
+
+<p>The post from The Verge mostly talks about how it was before the introduction of the Web 2.0 and how people were connected to each other with these blogs. I won’t gonna talk about that on this post becouse I was born in 2005 and my first internet usage was at the 2012. In these days the only place I knew was the Youtube and the Facebook. And becouse of that I don’t know or remember anything from that era. But I think that having a personal blog is a much better for sharing your story or your creations and here is my reasons for that.</p>
+
+<h2 id="1--youre-the-only-owner-of-your-content">1 ) You’re the only owner of your content</h2>
+
+<p>So when you create your blog site using simple tools like <a href="https://gohugo.io">Hugo</a> or <a href="https://jekyllrb.com">Jekyll</a> and host it on <a href="https://pages.github.com">Github Pages</a> or <a href="https://codeberg.page">Codeberg Pages</a>, you’re the owner. You’re completely free with your content, and no one other than you has any control over it. On platforms like Twitter, you’re not actually the owner of your account or the content you share. When something happens, it could get deleted for some “reasons,” and recovering that deleted content could be a huge pain.</p>
+
+<h2 id="2--its-better-than-micro-blogging-for-sharing-content">2 ) It’s better than Micro blogging for sharing content</h2>
+
+<p>With the intoduction of the Twitter in 2006, people met with a new term named micro blogging. It had less characters than a typical blogpost and aimed for sharing tiny things like a small update on your project or sharing what you’re doing on that exact moment. Not suitable for sharing articles or stories. Yes there is people sharing chains of tweets to tell big stories but that actually makes reading that story of the article less readable. Switching trough the posts and trying to find the next part of the chain isn’t optimal. For example we’re currently in the 2204th character and imagine reading that from a 250 character limited thread …</p>
+
+<p>These were the 2 main reasons why personal blogs should make a comeback. Creating a blog is a really easy task and if you have cool stories to tell us, why not <a href="https://startafuckingblog.com">start your own blog</a> in 2023?</p>
+
+<h2 id="thank-you">Thank You!</h2>
+
+<p>Batuhan Yılmaz - 26.01.2023 - 4/100</p>]]></content><author><name>Batuhan Yılmaz</name><email>bthyilmaz@outlook.com</email></author><summary type="html"><![CDATA[Hey guys I’m Batuhan and todays blogpost I’m going to talk about why personal blogging should make a comeback. Actually I had been considering to write a blogpost on that topic for some time. When I came across with The Verge’s this post about bringing the blogging back and its importance for the internet. I decided to write my troughs on that.]]></summary></entry><entry><title type="html">Finally HTTPS!</title><link href="http://localhost:4000/finally-https/" rel="alternate" type="text/html" title="Finally HTTPS!" /><published>2023-01-23T00:00:00+00:00</published><updated>2023-01-23T00:00:00+00:00</updated><id>http://localhost:4000/finally-https</id><content type="html" xml:base="http://localhost:4000/finally-https/"><![CDATA[<p>Hello everyone, I’m Batuhan and today I’m going to talk about how did I got the HTTPS working with my web server over cloudflare tunnel. Before starting that tutorial I should say that what works for me may not work for you, so please think before following these steps, in any case you can always come to our <a href="https://discord.gg/5p27ZdzQzF">discord server</a> from the About page and get more help from there. So without any further words lets go.</p>
+
+<h2 id="why-im-creating-this-blogpost-its-just-too-easy">Why I’m creating this blogpost it’s just too easy.</h2>
+
+<ul>
+  <li>I can hear you saying that becouse it’s really easy to create a certificate and use with your domain when it comes to the Cloudflare and Cloudflare Tunnel. When you enable it from the Cloudflare dashboard, it encrypts everything for you, and it just works generally. But when it comes to hosting my web archive using Apache 2 with zero extra configuration, things become a bit problematic with resulting in mixed content and a website that doesn’t work.</li>
+</ul>
+
+<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202022-04-02%20at%2010.53.34.png" alt="Mixed content error" /></p>
+
+<ul>
+  <li>The error that you’re currently seeing above this text was the main reason why I didn’t had HTTPS until now. At the beginning I was tried everything at the Cloudflare side to fix it but nothing has worked until I realised that main problem was at the server side. As I said at the beginning of the post, the server side was just a zero configration apache2 installation and was using the http protocol. And this was a problem for the Cloudflare and the browsers becouse while the main content is being served as https other stuff as well as the files and medias was still on the http and this was the problem.</li>
+  <li>The fix was actually too simple and after fixing it just inside 3 minutes I just kept thinking “Why the fuck I wasn’t knew that before!?”.  But yeah I fixed it in the end :).</li>
+</ul>
+
+<h2 id="how-did-i-fix-it">How did I fix it?</h2>
+
+<ul>
+  <li>So let’s come to the part where contains the fix. It’s very simple and as I said before it only takes like 3 minutes to fix it. So here is the step by step guide:</li>
+</ul>
+
+<p>Step 1 - Update the apache2 and OpenSSL into latest version avabile:</p>
+
+<ol>
+  <li>First you have to make sure that you have the latest version of the Apache2 and OpenSSL installed on your server just in case and for that just use the commands below to update them to latest version.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
+sudo apt install apache2 openssl
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Step 2 - Generate your certificates from Cloudflare Dashboard</p>
+
+<ol>
+  <li>Now go to your Cloudflare Dashboard and login. After that select your domain and go to the SSL/TLS section from the sidebar.
+<img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202022-12-02%20at%2022.58.50.png" alt="" />
+ In this page select the Full encryption for the best result.</li>
+  <li>After enabling the encryption go to the origin server section from the sidebar and create a certificate for your server. This certificate is gonna be used for the HTTPS and vertification of our server by the Cloudflare Tunnel.</li>
+</ol>
+
+<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202022-12-02%20at%2023.04.33.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>To create your certificate  press on the Create Certificate button and follow the pages.
+
+![](https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202022-12-02%20at%2023.04.48.png)
+</code></pre></div></div>
+
+<p>Press to the create button at the bottom and you should be able to see the page below.</p>
+
+<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202022-12-02%20at%2023.06.08.png" alt="" /></p>
+
+<p>Now Cloudflare gives us 2 very random looking text outputs over there, the top one is your public certificate and the bottom one is your private key. Please make sure you saved them locally to your computer before pressing to the blue button, becouse as the name suggests the private key is private and Cloudflare doesn’t stores it for you and you won’t be able to see it again. And you have to save it to somewhere you know becouse it’s needed for HTTPS.
+Now after creating your certificate and saving it on somewhere safe on your computer, it’s time to log into our server and configure the apache2.</p>
+
+<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202023-01-04%20at%2012.25.18.png" alt="" /></p>
+
+<p>Now change your dir into <code class="language-plaintext highlighter-rouge">/etc/apache2</code>and create a folder named Certificates with the command below</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /etc/apache2 &amp;&amp; mkdir certificates
+</code></pre></div></div>
+<p>After that place the certificates that you’ve saved your computer to that folder. The important thing is do not save the public and private key into same file! I suggest you to save the public key as <code class="language-plaintext highlighter-rouge">domain.key.pub</code> and the private key as <code class="language-plaintext highlighter-rouge">domain.key</code>.  This will make managing your certificates for the different websites if you’re hosting multiple sites on the same machine like me.</p>
+
+<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202023-01-23%20at%2022.33.27.png" alt="" /></p>
+
+<p>And now, the only thing has left is to add these certs to our  websites and it’s actually very easy.
+First you have to enable the ssl plugin of the apache and than add these certs to our website’s config file. 
+To enable the Apache2’s ssl and rewrite plugin use the command I put down below.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo a2enmod ssl &amp;&amp; sudo a2enmod rewrite
+</code></pre></div></div>
+<p>after running that command go to your websites config and add these 3 lines to your config.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SSLEngine on
+SSLCertificateFile /etc/apache2/certs/&lt;your-cert.crt&gt;
+SSLCertificateKeyFile /etc/apache2/certs/&lt;your-key.key&gt;
+</code></pre></div></div>
+<p>Make sure that these lines are placed under the VirtualHost tag, otherwise Apache won’t gonna use our certs and we’ll end with the same situation which we don’t want. So after that it’s done. Now restart the Apache and you’re ready to go!</p>
+
+<p>This is how I get my https working on my server with Cloudflare Tunnel and apache2 I hope this post helps to you in any case you can always come to our <a href="https://discord.gg/5p27ZdzQzF">discord server</a> and get more help from there.</p>
+
+<h2 id="thank-you">Thank You!</h2>
+
+<p>Batuhan Yılmaz - 23.01.2023 - 3/10</p>]]></content><author><name>Batuhan Yılmaz</name><email>bthyilmaz@outlook.com</email></author><summary type="html"><![CDATA[Hello everyone, I’m Batuhan and today I’m going to talk about how did I got the HTTPS working with my web server over cloudflare tunnel. Before starting that tutorial I should say that what works for me may not work for you, so please think before following these steps, in any case you can always come to our discord server from the About page and get more help from there. So without any further words lets go.]]></summary></entry><entry><title type="html">Beginning of the #100DaysToOffload</title><link href="http://localhost:4000/beginning-of-the-100daystooffload/" rel="alternate" type="text/html" title="Beginning of the #100DaysToOffload" /><published>2023-01-22T00:00:00+00:00</published><updated>2023-01-22T00:00:00+00:00</updated><id>http://localhost:4000/beginning-of-the-100daystooffload</id><content type="html" xml:base="http://localhost:4000/beginning-of-the-100daystooffload/"><![CDATA[<p>Hello everyone, I’m Batuhan and today I’m going to challenge myself to write 100 blogposts in 2023 and this is the second post of this challenge! If you’re wondering what is the first one of this challenge is, it’s the post before that post. [(Very very good Engrish momentum :D) Since I’m typing these posts without using any translators or tools like QuillBot or Grammarly to fix my typos and using my own brain to create these sentences. We all could expect some errors because I’m still a newcomer English.]</p>
+
+<p>So anyway, what is the #100DaysToOffload at the first place. Well a simple explanation of this challenge is writing 100 blogposts on your own personal blog inside 365 days. These blogposts doesn’t has to be so long or so short or doesn’t have to stick into a topic. You can write whatever you want into your personal blogsite and have fun with it. It’s a very simple challenge and this is why I’m going to try myself out on writing 100 blogposts until the 2024 comes.</p>
+
+<p>You can go and check out the <a href="https://100daystooffload.com">#100DaysToOffload</a> website to get more information about the challenge and some people who sucsessfuly completed that challenge. Hopefully at the end of the year I’ll be at that list too. Who knows.  We all gonna see that at the end of this year hopefully.</p>
+
+<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Wallpapers/wallpaper-repository/Wallpapers/fog.png" alt="Experimental emedded image" /></p>
+<h2 id="thank-you">Thank You!</h2>
+
+<p>Batuhan Yılmaz - 22.01.2023 - 2/100</p>]]></content><author><name>Batuhan Yılmaz</name><email>bthyilmaz@outlook.com</email></author><summary type="html"><![CDATA[Hello everyone, I’m Batuhan and today I’m going to challenge myself to write 100 blogposts in 2023 and this is the second post of this challenge! If you’re wondering what is the first one of this challenge is, it’s the post before that post. [(Very very good Engrish momentum :D) Since I’m typing these posts without using any translators or tools like QuillBot or Grammarly to fix my typos and using my own brain to create these sentences. We all could expect some errors because I’m still a newcomer English.]]]></summary></entry><entry><title type="html">Using an iPhone 6 Plus as a secondary phone in 2023</title><link href="http://localhost:4000/using-an-iphone-6-plus-as-a-secondary-phone-in-2023/" rel="alternate" type="text/html" title="Using an iPhone 6 Plus as a secondary phone in 2023" /><published>2023-01-20T00:00:00+00:00</published><updated>2023-01-20T00:00:00+00:00</updated><id>http://localhost:4000/using-an-iphone-6-plus-as-a-secondary-phone-in-2023</id><content type="html" xml:base="http://localhost:4000/using-an-iphone-6-plus-as-a-secondary-phone-in-2023/"><![CDATA[<p>Hello everyone, I’m Batuhan and this blogpost has written from my new iPhone 6 Plus! I’ve got this phone from my cousin and it’s been used ver carefully and it runs pretty great. And for that I wanted see how it holds up trough a day and for that I carried it with me to the school and it made trough the day without any big problems. Only problem that I had with this phone is it has a defective battery in it and it doesn’t lasts long. Like since the beginning of the test, I had to plug it in for 3 times and charge it up up to 80 percent in order to keep that thing up. Otherwise it works perfectly fine for almost any tasks. Like writing this blogpost on the Evernote app, taking some photos using the camera or listening music trough the Apple Music. 
 <img src="https://cdn.discordapp.com/attachments/789025765055791104/1066087440877637703/IMG_0010.PNG" alt="iPhone's battery health" />
 Like as you can see on the screenshot that I put there the battery life isn’t good and it could shut itself down even on %60 but I think this is also because that phone was in it’s box since the summer of 2020 and batter could be degraded because of that and I think it’ll fix itself after some charge cycles. Also becouse of these shutdowns the phone put itself into a mode named “Peak performace” and becouse of that it runs slower than it should. But it’s an easy fix. Just replace the battery and it’s back on the roads with full performance. But for now I’m not planning to do it</p>
 
@@ -101,17 +259,4 @@ WantedBy=multi-user.target
 </code></pre></div></div>
 <p>It was that simple and hopefully it works for you too. But always there is a chance of a thing that works for me not works for you. So in that situation you can come to our <a href="https://discord.gg/jt5wXUKa">Discord server</a> and get help from there.</p>
 
-<h3 id="thank-you">Thank You.</h3>]]></content><author><name>Batuhan Yılmaz</name><email>bthyilmaz@outlook.com</email></author><summary type="html"><![CDATA[Hello everyone I’m Batuhan and today I’m going to talk about how I configured my Jekyll Blog from it’s stock look and feel to the current look and feel.]]></summary></entry><entry><title type="html">Creating a new blog site. How I created it?</title><link href="http://localhost:4000/creating-a-new-blog-site-how-i-created-it/" rel="alternate" type="text/html" title="Creating a new blog site. How I created it?" /><published>2022-06-15T00:00:00+01:00</published><updated>2022-06-15T00:00:00+01:00</updated><id>http://localhost:4000/creating-a-new-blog-site-how-i-created-it</id><content type="html" xml:base="http://localhost:4000/creating-a-new-blog-site-how-i-created-it/"><![CDATA[<p>Hello everyone! This is Batuhan and this is the first post of my new blog.</p>
-
-<h3 id="but-why">But why?</h3>
-<p>This is a perfect question because I don’t have an proper answer for that. What I mean is I always wanted to have a blog site that’s easy to deploy and doesn’t needs lots of work to make something looks good. 
-Another answer is: I love logging what I’m doing and sharing that with other people who interested on the same topic with me. 
-Firstly I was considered the Google Blogpost  as a blog site but than I realised that it would be harder to do that using it because it doesn’t have good themes as the Jekyll does and not so easy to configure it. Than I started to host my own services at 22 March 2022 and with that I started to consider creating my own blog website. But at that time I wasn’t knew about the Jekyll and I was thinking about hiring a web developer and paying that guy like hundrends or thousands of dollars to just have a simple blog website that has a good backend. Than I came across	with some blog sites and some documentation sites of Open source is using a thing named “Jekyll” to create these web sites and than I started to do some research about it and this is where I’m right now. I started to a journey with that and hopefully that journey will last</p>
-<h3 id="how-i-created-that-website-with-lots-of-limitations-from-my-isp">How I created that website with lot’s of limitations from my ISP?</h3>
-<p>Now this is a question that I really want to answer a lot because my ISP doesn’t gives us IPv6 addresses and uses IPv4 with CG-NAT. Which makes opening a port impossible and they sell static IP’s for expensive prices and it’s really not worth to pay for it. So while I was doing researches about cheap VPS provider and I was about to pay Linode 5$/mo to just bridge my connection to a server that I don’t even know who can access to it. Than I started to look into other things like Ngrok but the problem with these stuff you had to use their domain for your website if you don’t want to pay for it. Than I came across with CloudFlareD tunnel. It was like finding Diamonds while mining hopelessly on Minecraft. It had everything that I wanted. It was free, I could use my own domain which I paid for it and most importantly it had features like ddos protection and other stuff. So I started to deploy my stuff on a Ivy Bridge era computer using Ubuntu Server 20.04. And it’s been 3 months now and I didn’t had any problems with it.</p>
-<h3 id="how-i-created-that-website-">How I created that website ?</h3>
-<p>So only thing that I had to do is setting up the Jekyll package as the documentation suggests. <a href="https://jekyllrb.com/docs/">Quickstart | Jekyll • Simple, blog-aware, static sites</a> And that’s it. It’s ready for production.</p>
-
-<p>So this was my first blogpost on my new blog and thanks for reading and joining to my journey with me. Please do not forget to join our Discord server<a href="https://discord.gg/jt5wXUKa">The Batuhan’s Network</a>!</p>
-
-<h2 id="thank-you">Thank You!</h2>]]></content><author><name>Batuhan Yılmaz</name><email>bthyilmaz@outlook.com</email></author><summary type="html"><![CDATA[Hello everyone! This is Batuhan and this is the first post of my new blog.]]></summary></entry></feed>
+<h3 id="thank-you">Thank You.</h3>]]></content><author><name>Batuhan Yılmaz</name><email>bthyilmaz@outlook.com</email></author><summary type="html"><![CDATA[Hello everyone I’m Batuhan and today I’m going to talk about how I configured my Jekyll Blog from it’s stock look and feel to the current look and feel.]]></summary></entry></feed>

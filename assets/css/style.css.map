@@ -3,14 +3,14 @@
 	"file": "style.css",
 	"sources": [
 		"style.scss",
-		"../_sass/main.scss",
-		"../_sass/klise/_fonts.scss",
-		"../_sass/klise/_base.scss",
-		"../_sass/klise/_layout.scss",
-		"../_sass/klise/_post.scss",
-		"../_sass/klise/_miscellaneous.scss",
-		"../_sass/klise/_syntax.scss",
-		"../_sass/klise/_dark.scss"
+		"_sass/main.scss",
+		"_sass/klise/_fonts.scss",
+		"_sass/klise/_base.scss",
+		"_sass/klise/_layout.scss",
+		"_sass/klise/_post.scss",
+		"_sass/klise/_miscellaneous.scss",
+		"_sass/klise/_syntax.scss",
+		"_sass/klise/_dark.scss"
 	],
 	"sourcesContent": [
 		"@import \"main\";\n",
