@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://thebatuhansnetwork.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="http://thebatuhansnetwork.xyz/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2023-04-30T22:21:01+01:00</updated><id>http://thebatuhansnetwork.xyz/feed.xml</id><title type="html">The Batuhan’s Blog</title><subtitle>The Batuhan's Blog</subtitle><author><name>Batuhan Yılmaz</name><email>batuhan@thebatuhansnetwork.xyz</email></author><entry><title type="html">iPhone 7 Plus review. Is it still usable in 2023?</title><link href="http://thebatuhansnetwork.xyz/iphone-7-plus-review-is-it-still-usable-in-2023/" rel="alternate" type="text/html" title="iPhone 7 Plus review. Is it still usable in 2023?" /><published>2023-04-30T00:00:00+01:00</published><updated>2023-04-30T00:00:00+01:00</updated><id>http://thebatuhansnetwork.xyz/iphone-7-plus-review-is-it-still-usable-in-2023</id><content type="html" xml:base="http://thebatuhansnetwork.xyz/iphone-7-plus-review-is-it-still-usable-in-2023/"><![CDATA[<p>Hey guys, I’m Batuhan and I’ve been using an 128 GB iPhone 7 Plus as my daily driver since January of this year and in this post I’m going to talk about my experiences with it.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://thebatuhansnetwork.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="http://thebatuhansnetwork.xyz/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2023-05-09T16:41:26+01:00</updated><id>http://thebatuhansnetwork.xyz/feed.xml</id><title type="html">The Batuhan’s Blog</title><subtitle>The Batuhan's Blog</subtitle><author><name>Batuhan Yılmaz</name><email>batuhan@thebatuhansnetwork.xyz</email></author><entry><title type="html">It Was Firewall</title><link href="http://thebatuhansnetwork.xyz/it-was-firewall/" rel="alternate" type="text/html" title="It Was Firewall" /><published>2023-05-09T00:00:00+01:00</published><updated>2023-05-09T00:00:00+01:00</updated><id>http://thebatuhansnetwork.xyz/it-was-firewall</id><content type="html" xml:base="http://thebatuhansnetwork.xyz/it-was-firewall/"><![CDATA[<p>Last night I did some security hardening on my server and noticed that after rebooting it all my remote connections went down.</p>
+
+<p>Syncthing over port 9000, XRDP over port 3386 and uptime kuma over port 8000 was stopped working and even tho I added them to UFW it shouldn’t be the problem right? Wrong! For some reason UFW was still blocking every single connection other than port 22 and 9090 and my only fix for it was disabling UFW.</p>
+
+<p>Disabling it fixed my problems instantly and I was happy becouse I was able to get my stuff up and running. But the problem now I don’t have any firewalls securing my server. And I think I’ll go that way but it isn’t secure. But even tho this isn’t a secure way to do that, this server doesn’t actually open to world wide web other than tailscale network and my blog is being hosted using Cloudflare Tunnel and it doesn’t directly opens my port 80 to open web.</p>
+
+<p>So I think it’s safe to say that I’m still secure with my setup and since I don’t have any directly open ports. It isn’t possible to have an attack on my server unless some malicious device pops up on tailscale.</p>
+
+<h2 id="reply-via-e-mail">Reply via <a href="mailto://batuhan@thebatuhansnetwork.xyz">E-Mail</a></h2>
+<h2 id="thank-you">Thank You!</h2>
+<p>Batuhan Yılmaz - 09.05.2023 - 17/100</p>]]></content><author><name>Batuhan Yılmaz</name><email>batuhan@thebatuhansnetwork.xyz</email></author><summary type="html"><![CDATA[Last night I did some security hardening on my server and noticed that after rebooting it all my remote connections went down.]]></summary></entry><entry><title type="html">Recreating Optiplex Server</title><link href="http://thebatuhansnetwork.xyz/recreating-optiplex-server/" rel="alternate" type="text/html" title="Recreating Optiplex Server" /><published>2023-05-08T00:00:00+01:00</published><updated>2023-05-08T00:00:00+01:00</updated><id>http://thebatuhansnetwork.xyz/recreating-optiplex-server</id><content type="html" xml:base="http://thebatuhansnetwork.xyz/recreating-optiplex-server/"><![CDATA[<p>2 weeks ago I got myself 2 used Optiplexes and my idea with them was recreating my old setup and today I’m going to recreate my Optiplex Server. Before creating it I planned my use cases.</p>
+<ol>
+  <li>A webserver inside a Debian VM</li>
+  <li>A Nextcloud server inside Ubuntu Server 22.04 VM</li>
+  <li>SMB server for file sharing on local</li>
+  <li>A Minecraft server running bare metal</li>
+  <li>And some tiny services like dashy and uptime kuma inside a Arch VM. (I use arch btw)
+These were the summary of things I planned to run on this server. So for that I needed to find the perfect OS for it. What I mean by that is, it should be optimized for virtualisation and it should be stable. And for these reasons I decided to go with Rocky Linux 9.1. I went their website, downloaded iso, burned using balenaEtcher and step 1 was completed. !<img src="https://cdn.discordapp.com/attachments/789025765055791104/1105173951015035091/DBBB546C-E464-4A43-95F2-9B06204311BA.png" alt="etcher" /></li>
+</ol>
+
+<p>Step 2 was finding an suitable OS drive. 
+At the beginning I considered using a USB3.0 32GB USB stick but than I saw that these usb sticks were good at storing files but not at randomly accsesing them. I tried installing Debian onto this 32GB Kioxia USB 3.0 stick and it ran slow as hell. And becouse of that I decided to go with an SSD and I brought out a 240GB Crucial BX500 for that !<img src="https://cdn.discordapp.com/attachments/789025765055791104/1105173950578835566/A959E34E-8708-4BBC-ACF6-8079C1D5F5CB.jpeg" alt="SSD and Optiplex server" />
+I preferred this SSD becouse it was my best option for it’s price. Thing makes this SSD better is it’s dram. Dram is important for random acsessing the data on drive and since I’m gonna run bunch of different virtual machines on it at the same time, it’s a feature that I need. Also when compared to it’s dramless same priced alternatives like WD Green. 
+After installing Rocky Linux 9 I greeted with the beautiful Gnome 40 desktop and it was ready to go. All things I needed (QEMU, Virt-Manager, Cockpit, HTTPD, OpenSSL, Samba) was installed upon installation since I selected them and only thing I needed to do was condfiguring them.</p>
+
+<h2 id="configration">Configration</h2>
+<p>My another reason for going with Rocky Linux was using terminal minimal as possible. Becouse since this OS is designed to be fast, production ready and easy to use I wanted to done most of the configration like users and samba shares over at Cockpit webui and for that I installed the cockpit-shares and cockpit-identification plugins and I’ve done configuring Samba without entering a single command. But of course when it comes to other parts such as setting up the Debian VM and other stuff I needed command line and here comes it.</p>
+
+<h3 id="debian-vm">Debian VM</h3>
+<blockquote>
+  <p>A webserver inside a Debian VM 
+<img src="https://cdn.discordapp.com/attachments/789025765055791104/1105173951476416616/Screenshot_2023-05-07_at_22.34.03.png" alt="CockpitUI" />
+As you can see on top I’ve created a tiny VM and it’s been serving as my webserver since the day I posted <a href="https://thebatuhansnetwork.xyz/the-page-you-currently-in/">this post</a> and you’re proably reading this from that virtual machine too.
+<img src="https://cdn.discordapp.com/attachments/789025765055791104/1105173951749038230/Screenshot_2023-05-07_at_22.35.18.png" alt="Htop" /></p>
+</blockquote>
+
+<p>As you can see only 84MB of ram usage! While setting this VM up I’ve gone with less things installed as possible and when the setup has finished I had a very simple OS with base system and nothing more. Than I installed some stuff I needed for Jekyll ,apache2 and openssh-server becouse ssh doesn’t uses too much memory and it’s just easier for me to ssh in instead of opening a VNC client and connecting to VM. Since it doesn’t has a GUI. 
+You may ask if this VM is that simple, what brings this website to me? Well answer is simple. It’s CloudFlare tunnel. I’ve installed it into servers itself and than created a Virtual network for this VM so it’s reachable from server and than I used it’s virtual IP and it worked! 
+With that Crucial SSD booting this VM only takes a seconds and feels same as running a container.</p>
+
+<h3 id="ubuntu-server">Ubuntu Server</h3>
+<blockquote>
+  <p>A Nextcloud server inside Ubuntu Server 22.04 VM</p>
+</blockquote>
+
+<p>Configuring Ubuntu Server VM was very simple. I just used the Nextcloud Snap package for it and with sime tiny configrations it was done. I’m not actually a fan of snaps becouse they’re bloaed as hell and runs much slower when compared to it’s alternative Faltpaks but since this VMs only purpose is Nextcloud I’m completely fine with it. 
+I gaved the same amount of resources expect sotrage and usage on this VM is way more than other one like 400Mb while idling but this was expected and even under load it doesn’t goes higher than 800Mbs and I’m happy with it.</p>
+
+<h3 id="extras">Extras</h3>
+<p>And I’ve installed some extras like Resillio Sync for file synchronising, Xrdp for be able to login to GUI remotely and autoSSH for port forwarding to a VPS.</p>
+
+<p>In a summary this was it guys. Of course things went more complicated and I tried to keep it simple. I’m planning to host myself a <a href="https://sr.ht/~tsileo/microblog.pub/">microblog.pub</a> instance like <a href="https://qrk.social/">Kev Quirk</a> and a <a href="https://sr.ht/~thecashewtrader/minv/">minv</a>
+server but for now I don’t have enough time to do these but when I do I’m gonna keep you guys updated about it. If you have any questions or need support for your server you can come and check out our <a href="https://discord.gg/5p27ZdzQzF">Discord server</a> .</p>
+
+<h2 id="reply-via-e-mail">Reply via <a href="mailto://batuhan@thebatuhansnetwork.xyz">e-mail</a></h2>
+<h2 id="thank-you">Thank You!</h2>
+<p>Batuhan Yılmaz - 08.05.2023 - 16/100</p>]]></content><author><name>Batuhan Yılmaz</name><email>batuhan@thebatuhansnetwork.xyz</email></author><summary type="html"><![CDATA[2 weeks ago I got myself 2 used Optiplexes and my idea with them was recreating my old setup and today I’m going to recreate my Optiplex Server. Before creating it I planned my use cases. A webserver inside a Debian VM A Nextcloud server inside Ubuntu Server 22.04 VM SMB server for file sharing on local A Minecraft server running bare metal And some tiny services like dashy and uptime kuma inside a Arch VM. (I use arch btw) These were the summary of things I planned to run on this server. So for that I needed to find the perfect OS for it. What I mean by that is, it should be optimized for virtualisation and it should be stable. And for these reasons I decided to go with Rocky Linux 9.1. I went their website, downloaded iso, burned using balenaEtcher and step 1 was completed. !]]></summary></entry><entry><title type="html">Today is 6 May 2023</title><link href="http://thebatuhansnetwork.xyz/today-is-6-may-2023/" rel="alternate" type="text/html" title="Today is 6 May 2023" /><published>2023-05-05T00:00:00+01:00</published><updated>2023-05-05T00:00:00+01:00</updated><id>http://thebatuhansnetwork.xyz/today-is-6-may-2023</id><content type="html" xml:base="http://thebatuhansnetwork.xyz/today-is-6-may-2023/"><![CDATA[<p>Dear diary. Today is 06 May 2023. Today is birthday of my girl bestfriend and I hope she’s having a great day but other than that. 3 months has passed since the earthquake happened. If you ask us. We’re doing completely well on that. We recreated our life in past 3 months and succeeded. We’re now in a safe and secure place. Everything is going great on it’s place. But the problem is they forgot it. Everyone expect people who affected by earthquake has already forgot what happened and everybody is focused on election. Just 2 month ago the earthquake was at the main focus of the politicans but now nobody talks about it. I watched the place I called as home collapsing. I watched the place I called home to became a graveyard for more than 50k people just in seconds. I watched people to cry out becouse of their loved ones. Not the things or houses but people they called as home, people they called as family … and much more. They’re gone and no one is able to revive them. So what now? Are we gonna just forget them, are we gonna forget how they left people on their own, are we gonna forget survivors? Are we gonna forget people who is responsible for that? Are we gonna forget people who left us to death? Are we just gonna forget everything? Looks like we have to becouse everyone has forgot it and is there any reason to keep these memories alive?
+Turkish people loves to forget and this time it didn’t take long for that to happen. But man a disaster like that … Last week I went to Malatya to see how people doing over there and seems like life on Malatya began to turn back to normal and everything going on it’s way but there is a one big problem. The landscape of this city we used to see isn’t there anymore. Without all these buildings and people who makes this city different isn’t there anymore and without them this place feels so strange to me. I used to call this place as home with everything and everyone inside but now. I’m a complete stranger to this place and I won’t be able to be part of Malatya anymore.</p>
+
+<p>I hope this earthquake changes something over at people becouse I don’t want that to happen again and I don’t want to loose my home one more time.</p>
+
+<h2 id="thank-you">Thank You!</h2>
+<p>Batuhan Yılmaz - 06.05.2023 - 15/100</p>]]></content><author><name>Batuhan Yılmaz</name><email>batuhan@thebatuhansnetwork.xyz</email></author><summary type="html"><![CDATA[Dear diary. Today is 06 May 2023. Today is birthday of my girl bestfriend and I hope she’s having a great day but other than that. 3 months has passed since the earthquake happened. If you ask us. We’re doing completely well on that. We recreated our life in past 3 months and succeeded. We’re now in a safe and secure place. Everything is going great on it’s place. But the problem is they forgot it. Everyone expect people who affected by earthquake has already forgot what happened and everybody is focused on election. Just 2 month ago the earthquake was at the main focus of the politicans but now nobody talks about it. I watched the place I called as home collapsing. I watched the place I called home to became a graveyard for more than 50k people just in seconds. I watched people to cry out becouse of their loved ones. Not the things or houses but people they called as home, people they called as family … and much more. They’re gone and no one is able to revive them. So what now? Are we gonna just forget them, are we gonna forget how they left people on their own, are we gonna forget survivors? Are we gonna forget people who is responsible for that? Are we gonna forget people who left us to death? Are we just gonna forget everything? Looks like we have to becouse everyone has forgot it and is there any reason to keep these memories alive? Turkish people loves to forget and this time it didn’t take long for that to happen. But man a disaster like that … Last week I went to Malatya to see how people doing over there and seems like life on Malatya began to turn back to normal and everything going on it’s way but there is a one big problem. The landscape of this city we used to see isn’t there anymore. Without all these buildings and people who makes this city different isn’t there anymore and without them this place feels so strange to me. I used to call this place as home with everything and everyone inside but now. I’m a complete stranger to this place and I won’t be able to be part of Malatya anymore.]]></summary></entry><entry><title type="html">The page you’re currently in being hosted from a VM</title><link href="http://thebatuhansnetwork.xyz/the-page-you-currently-in/" rel="alternate" type="text/html" title="The page you’re currently in being hosted from a VM" /><published>2023-05-01T00:00:00+01:00</published><updated>2023-05-01T00:00:00+01:00</updated><id>http://thebatuhansnetwork.xyz/the-page-you-currently-in</id><content type="html" xml:base="http://thebatuhansnetwork.xyz/the-page-you-currently-in/"><![CDATA[<p>So today I got my new server and I’m gonna post it tomorrow and the page you’re currently in is being hosted from a tiny and minimal as hell Debian 11 virtual machine with only 16GB of storage and 1GB of ram. My plan for memory was actually only 512Mb but for some reasons setting up Jekyll needed compiling some packages and 512 wasn’t enough for them to compile. They just spammed me out segmentation and unkown instruction errors and when I saw the resource usage I saw memory was filled up and ot just memory, even the swap space was filled up. But in the end I got it up and running.</p>
+
+<p>This was just a micro post about it and right now I’m writing up the actual post.</p>
+
+<h2 id="thank-you">Thank You!</h2>
+<p>Batuhan Yılmaz - 05.05.2023 - 14/100</p>]]></content><author><name>Batuhan Yılmaz</name><email>batuhan@thebatuhansnetwork.xyz</email></author><summary type="html"><![CDATA[So today I got my new server and I’m gonna post it tomorrow and the page you’re currently in is being hosted from a tiny and minimal as hell Debian 11 virtual machine with only 16GB of storage and 1GB of ram. My plan for memory was actually only 512Mb but for some reasons setting up Jekyll needed compiling some packages and 512 wasn’t enough for them to compile. They just spammed me out segmentation and unkown instruction errors and when I saw the resource usage I saw memory was filled up and ot just memory, even the swap space was filled up. But in the end I got it up and running.]]></summary></entry><entry><title type="html">iPhone 7 Plus review. Is it still usable in 2023?</title><link href="http://thebatuhansnetwork.xyz/iphone-7-plus-review-is-it-still-usable-in-2023/" rel="alternate" type="text/html" title="iPhone 7 Plus review. Is it still usable in 2023?" /><published>2023-04-30T00:00:00+01:00</published><updated>2023-04-30T00:00:00+01:00</updated><id>http://thebatuhansnetwork.xyz/iphone-7-plus-review-is-it-still-usable-in-2023</id><content type="html" xml:base="http://thebatuhansnetwork.xyz/iphone-7-plus-review-is-it-still-usable-in-2023/"><![CDATA[<p>Hey guys, I’m Batuhan and I’ve been using an 128 GB iPhone 7 Plus as my daily driver since January of this year and in this post I’m going to talk about my experiences with it.</p>
 
 <p>I actually wasn’t planning to get this phone. I was using my good old Galaxy Note 3 running Android 4.4.2 as my daily driver and I was happy with it.  Becouse only thing I needed was a minimal phone that gets my job done and runs everything I needed. But this is topic of another post and in future I’m planning to make a review on that phone but I’ve lost the one I had at the earthquake and now I have to find one in working condition which isn’t an easy task. But hopefully when I found one, I’ll make a post about it too. Enough talking lets start with 7 Plus.</p>
 
@@ -75,153 +142,4 @@ The 5th Febuary was a great day it was a sunny day on the Malatya and the school
 
 <h2 id="thank-you">Thank You!</h2>
 
-<p>Batuhan Yılmaz - 02.03.2023 - 7/100</p>]]></content><author><name>Batuhan Yılmaz</name><email>batuhan@thebatuhansnetwork.xyz</email></author><summary type="html"><![CDATA[Hello everyone, I’m Batuhan and greetings from another day with my messed up mind and it’s messed up ideas and stuff.]]></summary></entry><entry><title type="html">I’m back on Blogging</title><link href="http://thebatuhansnetwork.xyz/im-back-on-blogging/" rel="alternate" type="text/html" title="I’m back on Blogging" /><published>2023-02-23T14:30:00+00:00</published><updated>2023-02-23T14:30:00+00:00</updated><id>http://thebatuhansnetwork.xyz/im-back-on-blogging</id><content type="html" xml:base="http://thebatuhansnetwork.xyz/im-back-on-blogging/"><![CDATA[<p>Hello everyone I’m Batuhan and today I can’t be more happier becouse I’ll be able to start on blogging again. So soo much thing happened in the past, huge earthquakes fallen buildings restarting my life from scratch and etc …
-What matters most is me and my family is still alive and today I decided to start blogging again. I had a backup of that website on a hidden Codeberg repo and thanks to that I’m able to restart hosting this website. 
-I’m just writing this tiny post to inform you guys that I’m perfectly fine and just busy with recreating my life and other stuff. I want to say thank you for anyone supports Turkey on this disaster and helps us. Without any further words. Until next time guys!</p>
-
-<h2 id="thank-you">Thank You!</h2>
-<p>Batuhan Yılmaz - 23.02.2023 - 6/100</p>]]></content><author><name>Batuhan Yaşar Yılmaz</name></author><summary type="html"><![CDATA[Hello everyone I’m Batuhan and today I can’t be more happier becouse I’ll be able to start on blogging again. So soo much thing happened in the past, huge earthquakes fallen buildings restarting my life from scratch and etc … What matters most is me and my family is still alive and today I decided to start blogging again. I had a backup of that website on a hidden Codeberg repo and thanks to that I’m able to restart hosting this website. I’m just writing this tiny post to inform you guys that I’m perfectly fine and just busy with recreating my life and other stuff. I want to say thank you for anyone supports Turkey on this disaster and helps us. Without any further words. Until next time guys!]]></summary></entry><entry><title type="html">Adding RSS feeds from other blogs to end of my posts</title><link href="http://thebatuhansnetwork.xyz/adding-rss-feeds-from-other-blogs-to-end-of-my-posts/" rel="alternate" type="text/html" title="Adding RSS feeds from other blogs to end of my posts" /><published>2023-01-26T21:00:11+00:00</published><updated>2023-01-26T21:00:11+00:00</updated><id>http://thebatuhansnetwork.xyz/adding-rss-feeds-from-other-blogs-to-end-of-my-posts</id><content type="html" xml:base="http://thebatuhansnetwork.xyz/adding-rss-feeds-from-other-blogs-to-end-of-my-posts/"><![CDATA[<p>Hey guys I’m Batuhan and at the second post of this day I’m gonna talk about how I added latest posts from the RSS feeds I follow to my blog.</p>
-
-<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202023-01-26%20at%2023.58.40.png" alt="" /></p>
-
-<p>Like that. 
-So to do that I used a script named openring to do that. openring is a simple script that creates webrings using the RSS feeds. It fetches the RSS feeds that you’ve provided and creates an html file that you can place  into includes folder. So let’s go a step by step on how you can do that.</p>
-
-<h3 id="1--install-go">1 ) Install go</h3>
-
-<p>So this script has written in go and before start using it you have to compile it using go. I’m currently on macOS and gonna show the macOS way. But if you’re on a different OS than me you can go to https://go.dev/dl/ page and download the right binary for your OS. 
-I’m going to use the macPorts to install the go into my system. To install it use the command <code class="language-plaintext highlighter-rouge">sudo port install go</code> and wait for it. After that you can get into step 2.</p>
-
-<h3 id="2--clone-openring-and-build-it">2 ) Clone openring and build it</h3>
-
-<p>Now open your terminal again and clone the openring using the command down below.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://git.sr.ht/~sircmpwn/openring &amp;&amp; cd openring
-</code></pre></div></div>
-<p>After that command is done, run the <code class="language-plaintext highlighter-rouge">go build</code> command and wait for it. After it’s done, you can continue to step 3.</p>
-
-<h3 id="3--use-the-openring">3 ) Use the openring</h3>
-
-<p>And here is the step that we’re going to use the openring. Using it is very simple.</p>
-
-<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202023-01-27%20at%2000.21.39.png" alt="" /></p>
-
-<p>Now in there you can see a file named in.html. This file is our template, you can edit this file for your site’s needs and have a much better look that fits into your site. Now we’re going to create a file named out.html that includes our posts using the openring. To create that file you can use the command I put down below.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openring \
--s https://www.joelchrono12.xyz/feed.xml \ 
--s https://andy-bell.co.uk/feed \ 
--s https://kevquirk.com/feed.xml \
-&lt; in.html \
-&gt; out.html 
-</code></pre></div></div>
-<p>This command takes the in.html, adds 3 sources I placed and outputs it as the out.html. You can change these feeds as you like these are the ones that I’ve added to my site.</p>
-
-<p>So now it’s time to switch into jekyll part.</p>
-
-<p>Now in order to add our webring to our Jekyll blog. This part is really simple. 
-So now place the out.html file that you just created into _includes folder inside your jekyll blog and after that go to your _layouts folder and open the post.html file.  After that place the
-<code class="language-plaintext highlighter-rouge">% include out.html %</code> line under the main tag.</p>
-
-<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202023-01-27%20at%2000.42.42.png" alt="" /></p>
-
-<p>Like in that picture. And you’re done.</p>
-
-<p>I hope this post helps to everyone who wants to use openring on their own blog site. I wrote that blogpost while I’m so sleepy and I’m sorry for any mistakes I had.</p>
-
-<h2 id="thank-you">Thank You!</h2>
-
-<p>Batuhan Yılmaz - 27.01.2023 - 5/100</p>]]></content><author><name>Batuhan Yılmaz</name><email>batuhan@thebatuhansnetwork.xyz</email></author><summary type="html"><![CDATA[Hey guys I’m Batuhan and at the second post of this day I’m gonna talk about how I added latest posts from the RSS feeds I follow to my blog.]]></summary></entry><entry><title type="html">It’s time for personal blogs to make a comeback</title><link href="http://thebatuhansnetwork.xyz/its-time-for-personal-blogs-to-make-a-comeback/" rel="alternate" type="text/html" title="It’s time for personal blogs to make a comeback" /><published>2023-01-26T15:32:11+00:00</published><updated>2023-01-26T15:32:11+00:00</updated><id>http://thebatuhansnetwork.xyz/its-time-for-personal-blogs-to-make-a-comeback</id><content type="html" xml:base="http://thebatuhansnetwork.xyz/its-time-for-personal-blogs-to-make-a-comeback/"><![CDATA[<p>Hey guys I’m Batuhan and todays blogpost I’m going to talk about why personal blogging should make a comeback. Actually I had been considering to write a blogpost on that topic for some time. When I came across with The Verge’s <a href="https://www.theverge.com/23513418/bring-back-personal-blogging">this post</a> about bringing the blogging back and its importance for the internet. I decided to write my troughs on that.</p>
-
-<p>The post from The Verge mostly talks about how it was before the introduction of the Web 2.0 and how people were connected to each other with these blogs. I won’t gonna talk about that on this post becouse I was born in 2005 and my first internet usage was at the 2012. In these days the only place I knew was the Youtube and the Facebook. And becouse of that I don’t know or remember anything from that era. But I think that having a personal blog is a much better for sharing your story or your creations and here is my reasons for that.</p>
-
-<h2 id="1--youre-the-only-owner-of-your-content">1 ) You’re the only owner of your content</h2>
-
-<p>So when you create your blog site using simple tools like <a href="https://gohugo.io">Hugo</a> or <a href="https://jekyllrb.com">Jekyll</a> and host it on <a href="https://pages.github.com">Github Pages</a> or <a href="https://codeberg.page">Codeberg Pages</a>, you’re the owner. You’re completely free with your content, and no one other than you has any control over it. On platforms like Twitter, you’re not actually the owner of your account or the content you share. When something happens, it could get deleted for some “reasons,” and recovering that deleted content could be a huge pain.</p>
-
-<h2 id="2--its-better-than-micro-blogging-for-sharing-content">2 ) It’s better than Micro blogging for sharing content</h2>
-
-<p>With the intoduction of the Twitter in 2006, people met with a new term named micro blogging. It had less characters than a typical blogpost and aimed for sharing tiny things like a small update on your project or sharing what you’re doing on that exact moment. Not suitable for sharing articles or stories. Yes there is people sharing chains of tweets to tell big stories but that actually makes reading that story of the article less readable. Switching trough the posts and trying to find the next part of the chain isn’t optimal. For example we’re currently in the 2204th character and imagine reading that from a 250 character limited thread …</p>
-
-<p>These were the 2 main reasons why personal blogs should make a comeback. Creating a blog is a really easy task and if you have cool stories to tell us, why not <a href="https://startafuckingblog.com">start your own blog</a> in 2023?</p>
-
-<h2 id="thank-you">Thank You!</h2>
-
-<p>Batuhan Yılmaz - 26.01.2023 - 4/100</p>]]></content><author><name>Batuhan Yılmaz</name><email>batuhan@thebatuhansnetwork.xyz</email></author><summary type="html"><![CDATA[Hey guys I’m Batuhan and todays blogpost I’m going to talk about why personal blogging should make a comeback. Actually I had been considering to write a blogpost on that topic for some time. When I came across with The Verge’s this post about bringing the blogging back and its importance for the internet. I decided to write my troughs on that.]]></summary></entry><entry><title type="html">Finally HTTPS!</title><link href="http://thebatuhansnetwork.xyz/finally-https/" rel="alternate" type="text/html" title="Finally HTTPS!" /><published>2023-01-23T00:00:00+00:00</published><updated>2023-01-23T00:00:00+00:00</updated><id>http://thebatuhansnetwork.xyz/finally-https</id><content type="html" xml:base="http://thebatuhansnetwork.xyz/finally-https/"><![CDATA[<p>Hello everyone, I’m Batuhan and today I’m going to talk about how did I got the HTTPS working with my web server over cloudflare tunnel. Before starting that tutorial I should say that what works for me may not work for you, so please think before following these steps, in any case you can always come to our <a href="https://discord.gg/5p27ZdzQzF">discord server</a> from the About page and get more help from there. So without any further words lets go.</p>
-
-<h2 id="why-im-creating-this-blogpost-its-just-too-easy">Why I’m creating this blogpost it’s just too easy.</h2>
-
-<ul>
-  <li>I can hear you saying that becouse it’s really easy to create a certificate and use with your domain when it comes to the Cloudflare and Cloudflare Tunnel. When you enable it from the Cloudflare dashboard, it encrypts everything for you, and it just works generally. But when it comes to hosting my web archive using Apache 2 with zero extra configuration, things become a bit problematic with resulting in mixed content and a website that doesn’t work.</li>
-</ul>
-
-<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202022-04-02%20at%2010.53.34.png" alt="Mixed content error" /></p>
-
-<ul>
-  <li>The error that you’re currently seeing above this text was the main reason why I didn’t had HTTPS until now. At the beginning I was tried everything at the Cloudflare side to fix it but nothing has worked until I realised that main problem was at the server side. As I said at the beginning of the post, the server side was just a zero configration apache2 installation and was using the http protocol. And this was a problem for the Cloudflare and the browsers becouse while the main content is being served as https other stuff as well as the files and medias was still on the http and this was the problem.</li>
-  <li>The fix was actually too simple and after fixing it just inside 3 minutes I just kept thinking “Why the fuck I wasn’t knew that before!?”.  But yeah I fixed it in the end :).</li>
-</ul>
-
-<h2 id="how-did-i-fix-it">How did I fix it?</h2>
-
-<ul>
-  <li>So let’s come to the part where contains the fix. It’s very simple and as I said before it only takes like 3 minutes to fix it. So here is the step by step guide:</li>
-</ul>
-
-<p>Step 1 - Update the apache2 and OpenSSL into latest version avabile:</p>
-
-<ol>
-  <li>First you have to make sure that you have the latest version of the Apache2 and OpenSSL installed on your server just in case and for that just use the commands below to update them to latest version.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
-sudo apt install apache2 openssl
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<p>Step 2 - Generate your certificates from Cloudflare Dashboard</p>
-
-<ol>
-  <li>Now go to your Cloudflare Dashboard and login. After that select your domain and go to the SSL/TLS section from the sidebar.
-<img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202022-12-02%20at%2022.58.50.png" alt="" />
- In this page select the Full encryption for the best result.</li>
-  <li>After enabling the encryption go to the origin server section from the sidebar and create a certificate for your server. This certificate is gonna be used for the HTTPS and vertification of our server by the Cloudflare Tunnel.</li>
-</ol>
-
-<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202022-12-02%20at%2023.04.33.png" alt="" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>To create your certificate  press on the Create Certificate button and follow the pages.
-
-![](https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202022-12-02%20at%2023.04.48.png)
-</code></pre></div></div>
-
-<p>Press to the create button at the bottom and you should be able to see the page below.</p>
-
-<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202022-12-02%20at%2023.06.08.png" alt="" /></p>
-
-<p>Now Cloudflare gives us 2 very random looking text outputs over there, the top one is your public certificate and the bottom one is your private key. Please make sure you saved them locally to your computer before pressing to the blue button, becouse as the name suggests the private key is private and Cloudflare doesn’t stores it for you and you won’t be able to see it again. And you have to save it to somewhere you know becouse it’s needed for HTTPS.
-Now after creating your certificate and saving it on somewhere safe on your computer, it’s time to log into our server and configure the apache2.</p>
-
-<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202023-01-04%20at%2012.25.18.png" alt="" /></p>
-
-<p>Now change your dir into <code class="language-plaintext highlighter-rouge">/etc/apache2</code>and create a folder named Certificates with the command below</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /etc/apache2 &amp;&amp; mkdir certificates
-</code></pre></div></div>
-<p>After that place the certificates that you’ve saved your computer to that folder. The important thing is do not save the public and private key into same file! I suggest you to save the public key as <code class="language-plaintext highlighter-rouge">domain.key.pub</code> and the private key as <code class="language-plaintext highlighter-rouge">domain.key</code>.  This will make managing your certificates for the different websites if you’re hosting multiple sites on the same machine like me.</p>
-
-<p><img src="https://archive.thebatuhansnetwork.xyz/Media/Images/blog/Screenshot%202023-01-23%20at%2022.33.27.png" alt="" /></p>
-
-<p>And now, the only thing has left is to add these certs to our  websites and it’s actually very easy.
-First you have to enable the ssl plugin of the apache and than add these certs to our website’s config file. 
-To enable the Apache2’s ssl and rewrite plugin use the command I put down below.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo a2enmod ssl &amp;&amp; sudo a2enmod rewrite
-</code></pre></div></div>
-<p>after running that command go to your websites config and add these 3 lines to your config.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SSLEngine on
-SSLCertificateFile /etc/apache2/certs/&lt;your-cert.crt&gt;
-SSLCertificateKeyFile /etc/apache2/certs/&lt;your-key.key&gt;
-</code></pre></div></div>
-<p>Make sure that these lines are placed under the VirtualHost tag, otherwise Apache won’t gonna use our certs and we’ll end with the same situation which we don’t want. So after that it’s done. Now restart the Apache and you’re ready to go!</p>
-
-<p>This is how I get my https working on my server with Cloudflare Tunnel and apache2 I hope this post helps to you in any case you can always come to our <a href="https://discord.gg/5p27ZdzQzF">discord server</a> and get more help from there.</p>
-
-<h2 id="thank-you">Thank You!</h2>
-
-<p>Batuhan Yılmaz - 23.01.2023 - 3/10</p>]]></content><author><name>Batuhan Yılmaz</name><email>batuhan@thebatuhansnetwork.xyz</email></author><summary type="html"><![CDATA[Hello everyone, I’m Batuhan and today I’m going to talk about how did I got the HTTPS working with my web server over cloudflare tunnel. Before starting that tutorial I should say that what works for me may not work for you, so please think before following these steps, in any case you can always come to our discord server from the About page and get more help from there. So without any further words lets go.]]></summary></entry></feed>
+<p>Batuhan Yılmaz - 02.03.2023 - 7/100</p>]]></content><author><name>Batuhan Yılmaz</name><email>batuhan@thebatuhansnetwork.xyz</email></author><summary type="html"><![CDATA[Hello everyone, I’m Batuhan and greetings from another day with my messed up mind and it’s messed up ideas and stuff.]]></summary></entry></feed>
